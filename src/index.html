@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración que el usuario NO ve en pantalla -->
+    <meta charset="UTF-8"> <!-- Permite tildes, ñ y caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace la página responsiva en móviles -->
+    <title>Mi Portafolio Web</title> <!-- Título que aparece en la pestaña del navegador -->
+
+    <style>
+        /* Estilos CSS rápidos para probar */
+        body {
+            font-family: system-ui, sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            padding: 2rem;
+            max-width: 700px;
+            margin: auto;
+        }
+        h1 { color: #38bdf8; }
+        a { color: #f472b6; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .card {
+            background: #1e293b;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Todo lo que pongas aquí adentro SÍ es visible -->
+    
+    <header>
+        <h1>Mi Primer Proyecto Web</h1>
+        <p>Entorno de desarrollo local sobre Nginx y CachyOS.</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Etiquetas Básicas para Empezar</h2>
+            <p>Este es un párrafo tradicional creado con la etiqueta <code>&lt;p&gt;</code>.</p>
+            
+            <!-- Listas -->
+            <ul>
+                <li><code>&lt;h1&gt;</code> al <code>&lt;h6&gt;</code>: Jerarquía de títulos (usa un solo h1 por página).</li>
+                <li><code>&lt;ul&gt;</code> y <code>&lt;li&gt;</code>: Listas sin orden (viñetas).</li>
+                <li><code>&lt;ol&gt;</code> y <code>&lt;li&gt;</code>: Listas numeradas.</li>
+                <li><code>&lt;a href="..."&gt;</code>: Enlaces o hipervínculos.</li>
+            </ul>
+
+            <!-- Enlace externo -->
+            <p>Documentación oficial de referencia: 
+                <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">MDN Web Docs</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <hr style="border-color: #334155; margin-top: 2rem;">
+        <p><small>Servidor corriendo en puerto 8000</small></p>
+    </footer>
+</body>
+</html>

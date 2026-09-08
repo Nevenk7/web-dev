@@ -1,0 +1,14 @@
+echo "# Persistencia y datos de Docker
+db_data/
+*.log
+
+# Variables de entorno y secretos
+.env
+.env.local
+
+# Archivos de configuración de editores y SO
+.vscode/
+.idea/
+.DS_Store
+*~
+" > .gitignore
