@@ -1,64 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Configuración que el usuario NO ve en pantalla -->
-    <meta charset="UTF-8"> <!-- Permite tildes, ñ y caracteres especiales -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace la página responsiva en móviles -->
-    <title>Mi Portafolio Web</title> <!-- Título que aparece en la pestaña del navegador -->
-
-    <style>
-        /* Estilos CSS rápidos para probar */
-        body {
-            font-family: system-ui, sans-serif;
-            background-color: #0f172a;
-            color: #e2e8f0;
-            padding: 2rem;
-            max-width: 700px;
-            margin: auto;
-        }
-        h1 { color: #38bdf8; }
-        a { color: #f472b6; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .card {
-            background: #1e293b;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Web - Entorno Local</title>
+    
+    <!-- Enlace a estilos externos -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Todo lo que pongas aquí adentro SÍ es visible -->
-    
-    <header>
-        <h1>Mi Primer Proyecto Web</h1>
-        <p>Entorno de desarrollo local sobre Nginx y CachyOS.</p>
-    </header>
 
-    <main>
-        <section class="card">
-            <h2>Etiquetas Básicas para Empezar</h2>
-            <p>Este es un párrafo tradicional creado con la etiqueta <code>&lt;p&gt;</code>.</p>
-            <p>Probando el flujo de trabajo con Git y control de versiones.</p>
-            
-            <!-- Listas -->
-            <ul>
-                <li><code>&lt;h1&gt;</code> al <code>&lt;h6&gt;</code>: Jerarquía de títulos (usa un solo h1 por página).</li>
-                <li><code>&lt;ul&gt;</code> y <code>&lt;li&gt;</code>: Listas sin orden (viñetas).</li>
-                <li><code>&lt;ol&gt;</code> y <code>&lt;li&gt;</code>: Listas numeradas.</li>
-                <li><code>&lt;a href="..."&gt;</code>: Enlaces o hipervínculos.</li>
-            </ul>
+    <div class="contenedor">
 
-            <!-- Enlace externo -->
-            <p>Documentación oficial de referencia: 
-                <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">MDN Web Docs</a>
-            </p>
-        </section>
-    </main>
+        <header>
+            <h1>Bitácora de Desarrollo Web</h1>
+            <p>Servidor Nginx en contenedor Docker | CachyOS</p>
+            <nav>
+                <ul>
+                    <li><a href="#proposito">Propósito</a></li>
+                    <li><a href="#arquitectura">Arquitectura</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <footer>
-        <hr style="border-color: #334155; margin-top: 2rem;">
-        <p><small>Servidor corriendo en puerto 8000</small></p>
-    </footer>
+        <main>
+            <section id="proposito">
+                <h2>Propósito del Proyecto</h2>
+                <p>Construcción gradual de una aplicación web desde fundamentos frontend (HTML5/CSS3) hasta integración de servicios de backend y despliegue.</p>
+            </section>
+
+            <section id="arquitectura">
+                <h2>Arquitectura del Sistema</h2>
+                
+                <article class="tarjeta">
+                    <h3>Nginx (Proxy / Servidor Web)</h3>
+                    <p>Atiende peticiones HTTP en el puerto 8000 sirviendo archivos estáticos con recarga directa por volumen.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Contenedores Docker</h3>
+                    <p>Aislamiento total del entorno de desarrollo sin contaminar el sistema operativo base.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Control de Versiones</h3>
+                    <p>Gestión de ramas y trazabilidad de cambios sincronizados con GitHub vía llaves SSH.</p>
+                </article>
+            </section>
+
+            <section id="contacto">
+                <h2>Contacto / Registro</h2>
+                <form class="formulario" action="#" method="post">
+                    <div class="campo">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="text" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe un mensaje..."></textarea>
+                    </div>
+
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 - Entorno activo en puerto 8000.</p>
+        </footer>
+
+    </div>
+
 </body>
 </html>
